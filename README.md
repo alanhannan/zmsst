@@ -1,6 +1,7 @@
 zmsst
 =====
 
+<<<<<<< HEAD
 Zero MQ Send Stats and Test
 
 This project will create a set of objects for measuring storage of data.
@@ -33,3 +34,6 @@ Ubuntu 12.04-server-64bit
 ZeroMQ
 Perl
 
+=======
+Zero MQ Send Stats and Test
+>>>>>>> parent of 3e9c33a... added more in howto

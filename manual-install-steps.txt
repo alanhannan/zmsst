@@ -5,8 +5,26 @@ apt-get upgrade
 apt-get install mysqld
   root password "zmsst-p4SS"
 sudo apt-get install phpmyadmin
-  (select apache2)
-    phpmyadmin password "zmsst-p4SS"
+  ;; (select apache2)
+    ;; phpmyadmin password "zmsst-p4SS"
 
+#-- setup database as below
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+CREATE TABLE IF NOT EXISTS `datastore` (
+  `Index` int(64) NOT NULL AUTO_INCREMENT,
+  `SourceNode` text NOT NULL,
+  `DataType` text NOT NULL,
+  `DataInfo` text NOT NULL,
+  `DataTime` datetime NOT NULL,
+  PRIMARY KEY (`Index`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+#-- end setup table
 
+sudo aptitude install build-essential
+sudo apt-get install python-software-properties
+sudo add-apt-repository ppa:chris-lea/zeromq
+sudo aptitude install libzmq-dev
+sudo apt-get install uuid-dev
+sudo cpan ZeroMQ
 

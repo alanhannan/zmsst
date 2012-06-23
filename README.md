@@ -25,4 +25,11 @@ $Timestamp:$SourceNodeName:$DataType:$Data
 
 The $Data can be subdivided into key value pairs.
 
+-----
+
+Requirements / Assumptions:
+
+Ubuntu 12.04-server-64bit
+ZeroMQ
+Perl
 

@@ -1,26 +1,29 @@
-i#!/usr/bin/perl
+#!/usr/bin/perl
 
-    use DBI;
-    use DBD::mysql;
+#    use DBI;
+#    use DBD::mysql;
     use ZeroMQ qw/:all/;
 
-    $mysqluser = "statsdata";
-    $mysqlpass = "statsdata";
-    $database = "stats";
+#    $mysqluser = "root";
+#    $mysqlpass = "zmsst-p4SS";
+#    $database = "datastore";
 
-    $connection = ConnectToMySql($database);
+#    $connection = ConnectToMySql($database);
 
     my $ctxt = ZeroMQ::Context->new;
     #my $socket = $ctxt->socket(ZMQ_REP);
     my $socket = $ctxt->socket(ZMQ_PULL);
     $socket->bind( "tcp://*:9999" );
 
+while (1) {
     $msg = $socket->recv();
     $data = $msg->data;
-    $query = "insert into pingdb ( query_timestamp, host_from, host_to, packets_sent, loss_percent, rtt_min, rtt_ave, rtt_max, rtt_mdev) values (?, ?, ?, ?, ?, ?, ?, ?, ?)";
-    $statement = $connection->prepare($query);
-    $statement->execute( $query_timestamp, $host_from, $host_to, $packets_sent, $loss_percent, $rtt_min, $rtt_ave, $rtt_max, $rtt_mdev) ;
+#    $query = "insert into pingdb ( query_timestamp, host_from, host_to, packets_sent, loss_percent, rtt_min, rtt_ave, rtt_max, rtt_mdev) values (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+#    $statement = $connection->prepare($query);
+#    $statement->execute( $query_timestamp, $host_from, $host_to, $packets_sent, $loss_percent, $rtt_min, $rtt_ave, $rtt_max, $rtt_mdev) ;
 
+  print "data - $data - \n";
+}
 #--- start sub-routine ------------------------------------------------
 sub ConnectToMySql {
 #----------------------------------------------------------------------

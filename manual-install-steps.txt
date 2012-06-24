@@ -26,4 +26,5 @@ sudo add-apt-repository ppa:chris-lea/zeromq
 sudo aptitude install libzmq-dev
 sudo apt-get install uuid-dev
 sudo cpan ZeroMQ
-
+sudo apt-get install git
+cd /usr/local/src/ ; sudo git clone https://github.com/alanhannan/zmsst.git

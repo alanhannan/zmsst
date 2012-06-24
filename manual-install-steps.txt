@@ -1,9 +1,8 @@
-
 apt-get openssh-server
 apt-get update
 apt-get upgrade
 apt-get install mysqld
-  root password "zmsst-p4SS"
+  ;; root password "zmsst-p4SS"
 sudo apt-get install phpmyadmin
   ;; (select apache2)
     ;; phpmyadmin password "zmsst-p4SS"
